@@ -3,6 +3,11 @@
  (modules no_http)
  (libraries routes))
 
+(executable
+ (name main_http)
+ (modules main_http)
+ (libraries routes-http httpaf-lwt-unix))
+
 (alias
  (name example)
- (deps no_http.exe))
+ (deps no_http.exe main_http.exe))

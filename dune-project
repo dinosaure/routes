@@ -28,3 +28,10 @@
  (synopsis "Typed routing for OCaml applications")
  (description
    "routes provides combinators for adding typed routing to OCaml applications. The core library will be independent of any particular web framework or runtime. It does path based dispatch from a target url to a user provided handler."))
+
+(package
+  (name routes-http)
+  (depends
+    (routes
+      (= :version))
+    rock))
